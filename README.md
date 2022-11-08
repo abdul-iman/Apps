@@ -6,17 +6,25 @@
 - Press on Compute engine 
 - Go to VM instance 
 - Enable the Vm 
-- click on create instance 
-- select closest region 
-- select zone
-- select series and machine type
-- click on disk and change operating system to CentOS and select version 
+- Click on create instance 
+- Select closest region 
+- Select zone
+- Select series and machine type
+- Click on disk and change operating system to CentOS and select version 
 - Enable Allow HTTP traffic 
 - Enable Allow HTTPs traffic 
 - create VM 
 - Open in browser window
 
-## 
+### 
+- sudo dnf update
+- sudo dnf install httpd
+- sudo systemctl start httpd
+- sudo systemctl status httpd
+- curl -4 icanhazip.com 
+- sudo vi /var/www/html/index.html
+- Configure the html file to make it readable 
+
 
 
 
