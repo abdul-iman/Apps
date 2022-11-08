@@ -26,28 +26,26 @@
 - Configure the html file to make it readable 
 
 ### Deploying Web Server 2nd way
-•	curl -O https://wordpress.org/wordpress-6.0.2.tar.gz
-•	sudo dnf install httpd php-fpm php-json php-mysqlnd @mysql
-•	sudo systemctl enable --now httpd
-•	sudo systemctl enable php-fpm
-•	sudo systemctl start php-fpm
-•	sudo systemctl start httpd.service 
-•	sudo mv wordpress-6.0.2.tar.gz /var/www/html
-•	cd /var/www/html
-•	sudo tar xf wordpress-6.0.2.tar.gz
-•	sudo vi /etc/httpd/conf/httpd.conf
-•	sudo systemctl restart httpd
-•	sudo chown -R apache:apache wordpress
-•	sudo systemctl start mysqld
-•	sudo systemctl enable --now mysqld
-•	sudo systemctl status mysqld
-•	mysql_secure_installation
-•	mysql -u root -p
-•	sudo var/www/html/wordpress
-•	sudo var/www/html/wordpress/
-•	cd /var/www/html
-•	cd wordpress
-•	sudo vi wp-config.php
+- curl -O https://wordpress.org/wordpress-6.0.2.tar.gz
+- sudo dnf install httpd php-fpm php-json php-mysqlnd @mysql
+- sudo systemctl enable --now httpd
+- sudo systemctl enable php-fpm
+- sudo systemctl start php-fpm
+- sudo systemctl start httpd.service 
+- sudo mv wordpress-6.0.2.tar.gz /var/www/html
+- cd /var/www/html
+- sudo tar xf wordpress-6.0.2.tar.gz
+- sudo vi /etc/httpd/conf/httpd.conf
+- sudo systemctl restart httpd
+- sudo chown -R apache:apache wordpress
+- sudo systemctl start mysqld
+- sudo systemctl enable --now mysqld
+- sudo systemctl status mysqld
+- mysql_secure_installation
+- mysql -u root -p
+- cd /var/www/html
+- cd wordpress
+- sudo vi wp-config.php
 
 
 
