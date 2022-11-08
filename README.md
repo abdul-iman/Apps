@@ -27,7 +27,12 @@
 
 
 ### Links Used 
+Installing Apache Web Server on CentOS
 [https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8]
+
+create and start a VM instance 
+[https://cloud.google.com/compute/docs/instances/create-start-instance] 
+
 
 
 
