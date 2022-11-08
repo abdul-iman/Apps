@@ -1,2 +1,4 @@
-# Example Site 
-This is a sample readme file for our GitHub Example  repo. we're leanring Markdown.
+# Creating VM
+- Log in Google Cloud console 
+- Press on Compute engine 
+- Go to VM instance 
