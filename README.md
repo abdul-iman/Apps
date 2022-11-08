@@ -26,7 +26,7 @@
 - Configure the html file to make it readable 
 
 ### Deploying Web Server 2nd way
-- curl -O https://wordpress.org/wordpress-6.0.2.tar.gz
+- curl -O https://wordpress.org/wordpress-6.0.2.tar.gz 
 - sudo dnf install httpd php-fpm php-json php-mysqlnd @mysql
 - sudo systemctl enable --now httpd
 - sudo systemctl enable php-fpm
@@ -43,8 +43,7 @@
 - sudo systemctl status mysqld
 - mysql_secure_installation
 - mysql -u root -p
-- cd /var/www/html
-- cd wordpress
+- cd /var/www/html/wordpress
 - sudo vi wp-config.php
 
 
@@ -63,7 +62,3 @@ How to Install MySQL 8.0 on CentOS 8 / RHEL 8
 [https://www.tecmint.com/install-mysql-on-centos-8/]
 
 How to Install WordPress with LAMP in RHEL-Based Distributions [https://www.tecmint.com/install-wordpress-with-apache-on-centos-rhel-fedora/]
-
-
-
-
