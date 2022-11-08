@@ -1,5 +1,5 @@
 # Task 1 - Using Google Cloud
-## Create and configure a web server on Google Cloud Platform 
+## Creating and configure a web server on Google Cloud Platform 
 
 ### Creating and configuring a VM
 - Log in Google Cloud console 
@@ -25,6 +25,9 @@
 - sudo vi /var/www/html/index.html
 - Configure the html file to make it readable 
 
+
+### Links Used 
+[https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8]
 
 
 
