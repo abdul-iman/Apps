@@ -26,25 +26,27 @@
 - Configure the html file to make it readable 
 
 ### Deploying Web Server 2nd way
-- curl -O https://wordpress.org/wordpress-6.0.2.tar.gz 
+- curl -O https://wordpress.org/wordpress-6.0.2.tar.gz - To download WordPress using curl 
+##### WordPress is a LAMP stack application it runs on Linux, Apache HTTPd, MySQL and PHP
 - sudo dnf install httpd php-fpm php-json php-mysqlnd @mysql
 - sudo systemctl enable --now httpd
 - sudo systemctl enable php-fpm
 - sudo systemctl start php-fpm
 - sudo systemctl start httpd.service 
-- sudo mv wordpress-6.0.2.tar.gz /var/www/html
+##### Now httpd is running and we should see the test page.
+- sudo mv wordpress-6.0.2.tar.gz /var/www/html - This command will move WordPress to the requested directory.
 - cd /var/www/html
-- sudo tar xf wordpress-6.0.2.tar.gz
-- sudo vi /etc/httpd/conf/httpd.conf
+- sudo tar xf wordpress-6.0.2.tar.gz - Inside the requested directory we can extract the file using this command
+- sudo vi /etc/httpd/conf/httpd.conf - To deploy WordPress we must edit the configuration file and Search the config file for /DocumentRoot and add wordpress 
 - sudo systemctl restart httpd
-- sudo chown -R apache:apache wordpress
-- sudo systemctl start mysqld
-- sudo systemctl enable --now mysqld
+- sudo chown -R apache:apache wordpress - User and group both Appache 
+- sudo systemctl start mysqld - starting mysql
+- sudo systemctl enable --now mysqld - Enabaling mysql
 - sudo systemctl status mysqld
-- mysql_secure_installation
-- mysql -u root -p
-- cd /var/www/html/wordpress
-- sudo vi wp-config.php
+- mysql_secure_installation - Secure the MySQL installation by running this command
+- mysql -u root -p - creating new databse to host the wordpress
+- cd /var/www/html/wordpress 
+- sudo vi wp-config.php - Adding a file and configurining it
 
 
 
