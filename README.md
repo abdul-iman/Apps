@@ -5,12 +5,12 @@
 - Log in Google Cloud console 
 - Press on Compute engine 
 - Go to VM instance 
-- Enable the Vm 
+- Enable the VM
 - Click on create instance 
 - Select closest region 
 - Select zone
 - Select series and machine type
-- Click on disk and change operating system to CentOS and select version 
+- Click on disk, change operating system to CentOS, and select version 
 - Enable Allow HTTP traffic 
 - Enable Allow HTTPs traffic 
 - create VM 
@@ -18,9 +18,9 @@
 
 ### Deploying Web Server 1 option
 - sudo dnf update
-- sudo dnf install httpd - installing Appache 
+- sudo dnf install httpd - installing Apache 
 - sudo systemctl start httpd - Starting 
-- sudo systemctl status httpd - showing the statust of the httpd service
+- sudo systemctl status httpd - showing the status of the httpd service
 - curl -4 icanhazip.com - Getting own IP address 
 - sudo vi /var/www/html/index.html - configure the html to add more context
 
@@ -37,14 +37,15 @@
 - sudo tar xf wordpress-6.0.2.tar.gz - Inside the requested directory we can extract the file using this command
 - sudo vi /etc/httpd/conf/httpd.conf - To deploy WordPress we must configure the conf file and change DocumentRoot from “/var/www/html” to “/var/www/html/wordpress”
 - sudo systemctl restart httpd - Once any changes are made we must restart httpd
-- sudo chown -R apache:apache wordpress - User and group both Appache 
-- sudo systemctl start mysqld - starting mysql
-- sudo systemctl enable --now mysqld - Enabaling mysql
+- sudo chown -R apache:apache wordpress - User and group both Apache 
+- sudo systemctl start mysqld - starting MySQL
+- sudo systemctl enable --now mysqld - Enabling MySQL
 - sudo systemctl status mysqld
 - mysql_secure_installation - Secure the MySQL installation by running this command
-- mysql -u root -p - creating new databse to host the wordpress
+- mysql -u root -p - creating new database to host the wordpress
 - cd /var/www/html/wordpress 
 - sudo vi wp-config.php - creating this file in the wp-config.php file and and manully add paste a following text you get from wordpress installation
+
 
 ### Links Used 
 Installing Apache Web Server on CentOS

@@ -74,7 +74,14 @@
 - Software Development Kit is required
 - Although a benefit a lot of the time, there is no alternative, so if you just want to make a change to a CSS file and upload it, you have to deploy the whole site again. system downtime
 - you need to create a skeleton configuration
+- build times are slower
+- configuration is limited or requires additional coding
 
+
+## Method Chosen 
+The method chosen is Creating Static website Cloud bucket. This is because is highy scalable and you pay for what you use. can be scaled up or down depending on the usage.hosting on Google Cloud is good. The platform is reliable, has a wide variety of features, and is constantly growing.
+
+The reason im not going with firebase is because its not scalable and mostly android centered and cant process complex queries. Also not picking App Engine because theres down time and the builds are slower. there is no alternative, so if you just want to make a change to a css file and upload it, you have to deploy the whole site again.
 
 ### Links Used 
 App Engine [https://www.fizerkhan.com/blog/posts/free-static-page-hosting-on-google-app-engine-in-a-5-minutes]
