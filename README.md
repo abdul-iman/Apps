@@ -16,29 +16,27 @@
 - create VM 
 - Open in browser window
 
-### Deploying Web Server 1st way
+### Deploying Web Server 1 option
 - sudo dnf update
-- sudo dnf install httpd
-- sudo systemctl start httpd
-- sudo systemctl status httpd
-- curl -4 icanhazip.com 
-- sudo vi /var/www/html/index.html
-- Configure the html file to make it readable 
+- sudo dnf install httpd - installing Appache 
+- sudo systemctl start httpd - Starting 
+- sudo systemctl status httpd - showing the statust of the httpd service
+- curl -4 icanhazip.com - Getting own IP address 
+- sudo vi /var/www/html/index.html - configure the html to add more context
 
-### Deploying Web Server 2nd way
+### Deploying Web Server 2nd option
 - curl -O https://wordpress.org/wordpress-6.0.2.tar.gz - To download WordPress using curl 
 ##### WordPress is a LAMP stack application it runs on Linux, Apache HTTPd, MySQL and PHP
 - sudo dnf install httpd php-fpm php-json php-mysqlnd @mysql
 - sudo systemctl enable --now httpd
 - sudo systemctl enable php-fpm
 - sudo systemctl start php-fpm
-- sudo systemctl start httpd.service 
-##### Now httpd is running and we should see the test page.
+- sudo systemctl start httpd.service - Now httpd is running and we should see the test page.
 - sudo mv wordpress-6.0.2.tar.gz /var/www/html - This command will move WordPress to the requested directory.
 - cd /var/www/html
 - sudo tar xf wordpress-6.0.2.tar.gz - Inside the requested directory we can extract the file using this command
-- sudo vi /etc/httpd/conf/httpd.conf - To deploy WordPress we must edit the configuration file and Search the config file for /DocumentRoot and add wordpress 
-- sudo systemctl restart httpd
+- sudo vi /etc/httpd/conf/httpd.conf - To deploy WordPress we must configure the conf file and change DocumentRoot from “/var/www/html” to “/var/www/html/wordpress”
+- sudo systemctl restart httpd - Once any changes are made we must restart httpd
 - sudo chown -R apache:apache wordpress - User and group both Appache 
 - sudo systemctl start mysqld - starting mysql
 - sudo systemctl enable --now mysqld - Enabaling mysql
@@ -46,9 +44,7 @@
 - mysql_secure_installation - Secure the MySQL installation by running this command
 - mysql -u root -p - creating new databse to host the wordpress
 - cd /var/www/html/wordpress 
-- sudo vi wp-config.php - Adding a file and configurining it
-
-
+- sudo vi wp-config.php - creating this file in the wp-config.php file and and manully add paste a following text you get from wordpress installation
 
 ### Links Used 
 Installing Apache Web Server on CentOS
